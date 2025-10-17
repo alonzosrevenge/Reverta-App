@@ -31,14 +31,14 @@ export class NotificationService {
       }
 
       const notificationPayload = {
-        title: payload.title,
-        body: payload.body,
-        icon: payload.icon || '/favicon.ico',
-        badge: payload.badge || '/favicon.ico',
-        tag: payload.tag || 'reverta-spiritual',
-        url: payload.url || '/',
-        ...payload
-      };
+  ...payload,
+  title: payload.title,
+  body: payload.body,
+  icon: payload.icon || '/favicon.ico',
+  badge: payload.badge || '/favicon.ico',
+  tag: payload.tag || 'reverta-spiritual',
+  url: payload.url || '/',
+};
 
       let successCount = 0;
       
