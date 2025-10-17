@@ -1,0 +1,94 @@
+// pages/fajr.tsx
+
+import { useState } from "react";
+import FajrIntro from "../prayerIntros/FajrIntro";
+
+const FAJR_STEPS = [
+  {
+    arabic: "الله أكبر",
+    english: "Allahu Akbar (God is the Greatest)",
+    image: "/images/fajr_1.png",
+    audio: "/audio/fajr_1.mp3",
+  },
+  {
+    arabic: "سُبْحَانَكَ ٱللَّهُمَّ وَبِحَمْدِكَ...",
+    english: "Glory is to You, O Allah, and praise...",
+    image: "/images/fajr_2.png",
+    audio: "/audio/fajr_2.mp3",
+  },
+  {
+    arabic: "الفاتحة",
+    english: "The Opening (Surah Al-Fatiha)",
+    image: "/images/fajr_3.png",
+    audio: "/audio/fajr_3.mp3",
+  },
+  {
+    arabic: "سورة الإخلاص",
+    english: "Surah Al-Ikhlas",
+    image: "/images/fajr_4.png",
+    audio: "/audio/fajr_4.mp3",
+  },
+  {
+    arabic: "الله أكبر",
+    english: "Move to Ruku (bowing)",
+    image: "/images/fajr_5.png",
+    audio: "/audio/fajr_5.mp3",
+  },
+  {
+    arabic: "السلام عليكم ورحمة الله",
+    english: "Peace and mercy of Allah be upon you",
+    image: "/images/fajr_6.png",
+    audio: "/audio/fajr_6.mp3",
+  },
+];
+
+export default function Fajr() {
+  const [showIntro, setShowIntro] = useState(true);
+  const [stepIndex, setStepIndex] = useState(0);
+
+  const handleBegin = () => setShowIntro(false);
+  const handleNext = () => {
+    if (stepIndex < FAJR_STEPS.length - 1) {
+      setStepIndex(stepIndex + 1);
+    }
+  };
+
+  if (showIntro) {
+    return <FajrIntro onBegin={handleBegin} />;
+  }
+
+  const current = FAJR_STEPS[stepIndex];
+
+  return (
+    <div style={{ padding: 20, textAlign: "center" }}>
+      {/* IMAGE */}
+      <div style={{ marginBottom: 20 }}>
+        <img
+          src={current.image}
+          alt={`Step ${stepIndex + 1}`}
+          style={{
+            width: "100%",
+            maxWidth: 300,
+            height: "auto",
+            borderRadius: 8,
+          }}
+        />
+      </div>
+
+      {/* TEXT */}
+      <h2 style={{ fontSize: 24 }}>{current.arabic}</h2>
+      <p style={{ fontSize: 18 }}>{current.english}</p>
+
+      {/* AUDIO */}
+      <audio controls key={current.audio} style={{ marginTop: 10 }}>
+        <source src={current.audio} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      {/* NEXT BUTTON */}
+      <div style={{ marginTop: 20 }}>
+        <button onClick={handleNext}>Next</button>
+      </div>
+    </div>
+  );
+}

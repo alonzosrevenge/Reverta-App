@@ -1,0 +1,84 @@
+const terms = [
+  {
+    title: "Du'a (دعاء)",
+    definition:
+      "A personal prayer or supplication where a Muslim speaks directly to Allah, asking for guidance, help, forgiveness, or expressing gratitude. It is a powerful act of worship mentioned often in the Qur'an and Sunnah.",
+    audio: "/audio/dua.mp3",
+  },
+  {
+    title: "Salah (صلاة)",
+    definition:
+      "The Islamic ritual prayer performed five times daily. It is one of the Five Pillars of Islam and a direct link between the worshipper and Allah.",
+    audio: "/audio/salah.mp3",
+  },
+  {
+    title: "Wudu (وضوء)",
+    definition:
+      "The ritual washing performed before prayer. It includes washing the hands, face, arms, and feet, and is required for purity before salah.",
+    audio: "/audio/wudu.mp3",
+  },
+  {
+    title: "Shahada (شهادة)",
+    definition:
+      "The declaration of faith: 'There is no god but Allah, and Muhammad is the Messenger of Allah.' It is the first of the Five Pillars and the entry point into Islam.",
+    audio: "/audio/shahada.mp3",
+  },
+  {
+    title: "Wudu (وضوء)",
+    definition:
+      "The ritual washing performed before prayer. It purifies the body and prepares the heart for worship.",
+    audio: "/audio/wudu.mp3",
+  },
+  {
+    title: "Qibla (قبلة)",
+    definition:
+      "The direction Muslims face during prayer — towards the Kaaba in Mecca. It symbolizes unity in worship.",
+    audio: "/audio/qibla.mp3",
+  },
+  {
+    title: "Adhan (أذان)",
+    definition:
+      "The call to prayer, recited from the mosque to invite believers to join the salah. It serves as a spiritual reminder throughout the day.",
+    audio: "attached_assets/Universal School.m4a",
+  },
+  {
+    title: "Dua (دعاء)",
+    definition:
+      "Personal supplication or prayer to Allah. Unlike salah, dua can be made at any time and in any language.",
+    audio: "/audio/dua.mp3",
+  },
+  {
+    title: "Surah (سورة)",
+    definition:
+      "A chapter of the Qur’an. Each surah carries unique guidance, stories, and lessons. There are 114 in total.",
+    audio: "/audio/surah.mp3",
+  },
+  {
+    title: "Rak'ah (ركعة)",
+    definition:
+      "A unit of Islamic prayer that includes specific physical and spiritual actions. Each salah consists of a set number of rak‘at.",
+    audio: "/audio/rakah.mp3",
+  },
+  {
+    title: "Tasbeeh (تسبيح)",
+    definition:
+      "Glorifying Allah by repeating phrases like 'SubhanAllah' (Glory be to God). It can be done with prayer beads or on the fingers.",
+    audio: "/audio/tasbeeh.mp3",
+  },
+  {
+    title: "Fajr (فجر)",
+    definition:
+      "The dawn prayer — the first of the five daily prayers, performed before sunrise. It marks the spiritual start of the day.",
+    audio: "/audio/fajr.mp3",
+  },
+  {
+    title: "Sunnah (سنة)",
+    definition:
+      "The teachings and practices of the Prophet Muhammad ﷺ. Following the Sunnah helps Muslims live in accordance with the Prophet’s example.",
+    audio: "/audio/sunnah.mp3",
+  },
+
+  // Add more...
+];
+
+export default terms;
