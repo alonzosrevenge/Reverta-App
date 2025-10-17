@@ -64,6 +64,7 @@ export class MemStorage implements IStorage {
       email: 'test@example.com',
       name: 'TestUser',
       password: 'hashedpassword',
+      gender: 'unspecified',
       imanScore: 250,
       streak: 7,
       createdAt: new Date(),
